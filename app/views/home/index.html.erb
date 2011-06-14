@@ -1,0 +1,5 @@
+<ul>
+  <% Store.limit(300).each do |s| %>
+  <%= render :partial => "store", :locals => {:store => s} %>
+  <% end %>
+</ul>

@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: profilesamples_dev
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: profilesamples_test
+
+production:
+  <<: *default
+  database: profilesamples_dev
